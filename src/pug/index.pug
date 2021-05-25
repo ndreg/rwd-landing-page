@@ -4,7 +4,37 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel="stylesheet", href="./styles/style.css")
     title Curso Responsive Web Design EDteam
+    link(rel="preconnect" href="https://fonts.gstatic.com")
+    link(href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet")
+    link(rel="stylesheet", href="./styles/style.css")
+
   body 
+    //- Header
+    header.main-header 
+      .l-container.main-header__block
+        img(src="./resources/img/EDteam-logo.svg", alt="Logo EDteam" class="main-header__logo")
+        .main-menu-toggle#main-menu-toggle
+        nav.main-nav#main-nav
+          ul.main-menu
+            li.main-menu__item: a(href="#").main-menu__link Taller de emprendedores
+            li.main-menu__item: a(href="#").main-menu__link Workshops
+            li.main-menu__item: a(href="#").main-menu__link Expositores
+            
+    //- Main banner
+    .main-banner
+    //- Main
+    main
+      //- Descripcion
+      section.l-section
+      //- Eventos
+      section.l-section.l-section--diagonal
+      //- Expositores
+      section.l-section
+      //- Ediciones anteriores
+      section.lsection.l-section--diagonal
+      //- Inscripciones
+      section.l-section
+    //- Footer
+    footer.main-footer
     script(src="./js/index.js") 

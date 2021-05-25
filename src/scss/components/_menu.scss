@@ -1,0 +1,71 @@
+.main-menu {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  list-style: none;
+
+  &__item {
+    padding: 1rem;
+  }
+
+  &__link {
+    color: $border-color;
+    font-family: $lato;
+    margin-left: 1rem;
+
+    &:hover {
+      color: lighten($text-color, 10);
+      text-decoration: underline;
+    }
+  }
+  @include from(l) {
+    display: flex;
+    &__link {
+      color: $text-color;
+    }
+  }
+}
+
+.main-nav {
+  position: fixed;
+  height: calc(100vh - #{$header-height});
+  width: 80vw;
+  background: $dark-color;
+  top: $header-height;
+  right: -80vw;
+  transition: right 0.3s;
+  padding-top: 1rem;
+
+  &.show {
+    right: 0;
+  }
+
+  @include from(l) {
+    position: static;
+    background: transparent;
+    padding-top: 0;
+    height: auto;
+    width: auto;
+  }
+}
+
+.main-menu-toggle {
+  $color: $dark-color;
+  background: linear-gradient(
+    $color 20%,
+    transparent 20%,
+    transparent 40%,
+    $color 40%,
+    $color 60%,
+    transparent 60%,
+    transparent 80%,
+    $color 80%
+  );
+  cursor: pointer;
+  width: 2.2rem;
+  height: 1.6rem;
+
+  @include from(l) {
+    display: none;
+  }
+}

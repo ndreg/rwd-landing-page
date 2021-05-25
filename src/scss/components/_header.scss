@@ -1,0 +1,16 @@
+.main {
+  &-header {
+    height: $header-height;
+    border-bottom: 1px solid $border-color;
+
+    &__block {
+      justify-content: space-between;
+      align-items: center;
+      height: 100%;
+    }
+
+    &__logo {
+      height: 2rem;
+    }
+  }
+}
