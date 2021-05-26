@@ -1,3 +1,6 @@
+include ./components/_card
+include ./components/_banner
+
 doctype html
 html(lang="en")
   head
@@ -22,13 +25,22 @@ html(lang="en")
             li.main-menu__item: a(href="#").main-menu__link Expositores
             
     //- Main banner
-    .main-banner
+    +banner 
+
     //- Main
     main
       //- Descripcion
       section.l-section
+        .l-container
+          p.s-50.l-50.center-block.center-content
+            | El EDcamp es el evento internacional de tecnologia de EDteam. Dos dias para compartir conocimientos, experiencias y crecer profesionalmente. El staff de EDteam completo por primera vez en Lima. Te esperamos!
       //- Eventos
       section.l-section.l-section--diagonal
+        .l-container
+          h2.s-100.l-100.center-content Eventos 
+          .card-grid
+            +card
+            +card
       //- Expositores
       section.l-section
       //- Ediciones anteriores

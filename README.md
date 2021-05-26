@@ -2,6 +2,10 @@
 
 This the lastest project of the rwd course of EDteam.
 
+## Teacher
+
+**Alvaro Felipe**
+
 ## Technologies used
 
 - HTML was created with [PUG](https://pugjs.org/api/getting-started.html)

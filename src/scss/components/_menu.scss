@@ -9,8 +9,7 @@
   }
 
   &__link {
-    color: $border-color;
-    font-family: $lato;
+    color: var(--color-border);
     margin-left: 1rem;
 
     &:hover {
@@ -21,7 +20,7 @@
   @include from(l) {
     display: flex;
     &__link {
-      color: $text-color;
+      color: var(--color-text);
     }
   }
 }
@@ -29,13 +28,13 @@
 .main-nav {
   position: fixed;
   height: calc(100vh - #{$header-height});
-  width: 80vw;
-  background: $dark-color;
+  width: 40vw;
+  background: var(--color-dark);
   top: $header-height;
-  right: -80vw;
+  right: -40vw;
   transition: right 0.3s;
   padding-top: 1rem;
-
+  z-index: var(--z-fixed);
   &.show {
     right: 0;
   }
@@ -50,7 +49,7 @@
 }
 
 .main-menu-toggle {
-  $color: $dark-color;
+  $color: var(--color-dark);
   background: linear-gradient(
     $color 20%,
     transparent 20%,

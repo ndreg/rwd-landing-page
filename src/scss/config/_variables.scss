@@ -1,13 +1,44 @@
-//- Sizes
-$max-width: 1200px;
-$header-height: 4rem;
-//- Fonts
-$lato: Lato, sans-serif;
-//- Colors
+// Colores
 $border-color: #ccc;
 $text-color: #53575a;
 $dark-color: #282d31;
-//- Breakpoints
+
+:root {
+  --color-first: #006dc6;
+  --color-border: #ccc;
+  --color-text: #53575a;
+  --color-dark: #282d31;
+  --color-alert: #ff2419;
+}
+
+// Posicionamiento Z-index
+:root {
+  --z-back: -10;
+  --z-normal: 1;
+  --z-tooltip: 10;
+  --z-fixed: 100;
+  --z-modal: 1000;
+}
+// Medidas
+$max-width: 1200px;
+$header-height: 4rem;
 $breakpoints: (
   l: 960px,
 );
+
+// Fuente
+$lato: Lato, sans-serif;
+:root {
+  --fz-h1: 2rem;
+  --fz-h2: 1.5rem;
+  --fz-h3: 1.25rem;
+  --fz-body: 0.9rem;
+  --fz-small: 0.75rem;
+  @include from(l) {
+    --fz-h1: 2.5rem;
+    --fz-h2: 1.75rem;
+    --fz-h3: 1.5rem;
+    --fz-body: 1rem;
+    --fz-small: 0.8rem;
+  }
+}

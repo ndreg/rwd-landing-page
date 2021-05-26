@@ -1,0 +1,36 @@
+.main-banner {
+  --padding: 2rem 1rem 3rem;
+  --logo-height: 3.5rem;
+  @include from(l) {
+    --padding: 5rem 1rem 6rem;
+    --logo-height: 5rem;
+  }
+
+  padding: var(--padding);
+  background: var(--color-first);
+  color: #fff;
+  text-align: center;
+  clip-path: polygon(0 0, 100% 0, 100% 94%, 0 100%);
+  position: relative;
+
+  &__content {
+    position: relative;
+  }
+
+  &__logo {
+    height: var(--logo-height);
+    display: block;
+    margin: 0 auto 0.5rem;
+  }
+
+  &__hero-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    opacity: 0.1;
+  }
+}
